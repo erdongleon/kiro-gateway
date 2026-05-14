@@ -40,7 +40,7 @@ services:
     
     # Alternative: Load all variables from .env file
     env_file:
-      - .env
+      - /data/kiro/.env
     
     volumes:
       # Mount credentials file (if using KIRO_CREDS_FILE)
@@ -52,7 +52,7 @@ services:
       # - ~/.local/share/kiro-cli:/home/kiro/.local/share/kiro-cli  # Linux/macOS
       
       # Mount debug logs directory (optional, for debugging)
-      - ./debug_logs:/app/debug_logs
+      - /data/kiro/debug_logs:/app/debug_logs
     
     restart: unless-stopped
     
